@@ -22,4 +22,9 @@ make
 <li>If the player completes the word before losing all their lives, they WIN! Otherwise, game over :'(</li>
 </ol>
 
+<h3>Plans for project</h3>
+
+[] <p>Add output of guesses player has already taken</p>
+[] <p>Add ascii art of hangman</p>
+
 <p>ENJOY :)</p>
