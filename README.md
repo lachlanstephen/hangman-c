@@ -24,7 +24,7 @@ make
 
 <h3>Plans for project</h3>
 
-[] <p>Add output of guesses player has already taken</p>
-[] <p>Add ascii art of hangman</p>
+- [ ] Add output of guesses player has already taken
+- [ ] Add ascii art of hangman
 
 <p>ENJOY :)</p>
