@@ -4,7 +4,7 @@
 
 <h3>Compiling the program</h3>
 
-<p><i>Run the following commands</i>:</p>
+<p>Run the following commands:</p>
 
 ```
 make
@@ -14,7 +14,7 @@ make
 
 <h3>Gameplay</h3>
 
-<p><i>How to play my program</i>:</p>
+<p>How to play my program:</p>
 
 <ol>
 <li>Player 1 types a lowercase alphabetical word as the secret, and hits 'enter'.</li>
