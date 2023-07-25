@@ -6,14 +6,14 @@
 /*   By: darkwater <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 07:53:39 by darkwater         #+#    #+#             */
-/*   Updated: 2023/07/25 08:50:16 by darkwater        ###   ########.fr       */
+/*   Updated: 2023/07/26 01:40:42 by darkwater        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "functions.h"
 #include <string.h>
 
-void	end_of_game(bool victory, char *secret)
+void	end_of_game(bool victory, char *secret, unsigned int lives)
 {
 	system("clear");
 	if (victory == true)
@@ -25,7 +25,9 @@ void	end_of_game(bool victory, char *secret)
 	{
 		printf("\n\n\n\t   Better luck next time!\n\n");
 	}
-	printf("\n\t   The answer was '%s'.\n\n\n", secret);
+	printf("\n\t   The answer was '%s'.\n\n", secret);
+	ft_print_art(lives);
+	printf("\n\n");
 }
 
 void	ft_prn_current(char *result)
@@ -91,7 +93,7 @@ void	ft_gameplay(char *secret, size_t secret_len)
 		user_guess(secret, result, &lives);
 		ft_prn_current(result);
 	}
-	end_of_game(ft_strcmp(result, secret), secret);
+	end_of_game(ft_strcmp(result, secret), secret, lives);
 	free(result);
 }
 

@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   user_input.c                                       :+:      :+:    :+:   */
+/*   ft_ascii_art.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: darkwater <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 08:13:50 by darkwater         #+#    #+#             */
-/*   Updated: 2023/07/26 01:12:18 by darkwater        ###   ########.fr       */
+/*   Created: 2023/07/26 01:43:48 by darkwater         #+#    #+#             */
+/*   Updated: 2023/07/26 01:48:43 by darkwater        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "functions.h"
 
-char	get_user_input(unsigned int lives)
+void	prn_hangman_end(void)
 {
-	char	guess;
+	printf("\n\t\t+----+"
+		"\n\t\t|    |"
+		"\n\t\t|    O"
+		"\n\t\t|   /|\\"
+		"\n\t\t|   / \\"
+		"\n\t\t|"
+		"\n\t\t+=========\n");
+}
 
-	guess = 0;
-	printf("\nCurrent lives: %d\n", lives);
-	ft_print_art(lives);
-	while (guess < 'a' || guess > 'z')
-	{
-		printf("\nWhat letter would you like to guess? ");
-		scanf("\n%c", &guess);
-		if (guess < 'a' || guess > 'z')
-		{
-			printf("\nPlease input a lowercase alphabetical character!\n");
-		}
-	}
-	return (guess);
+void	ft_print_art(unsigned int lives)
+{
+	if (lives == 5)
+		prn_hangman_5();
+	else if (lives == 4)
+		prn_hangman_4();
+	else if (lives == 3)
+		prn_hangman_3();
+	else if (lives == 2)
+		prn_hangman_2();
+	else if (lives == 1)
+		prn_hangman_1();
+	else
+		prn_hangman_end();
 }
